@@ -32,12 +32,12 @@ function PlantList() {
             width: "280px",
             background: "#B0EAD5",
             borderRadius: "16px",
-            position: "relative",
+            // position: "relative",
             // marginTop: "15px",
             cursor: "pointer",
           }}
           onClick={() =>
-            navigate(`/${each?.id}`, {
+            navigate("/plant", {
               state: { plantInfo: each },
             })
           }

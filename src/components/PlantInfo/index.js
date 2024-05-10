@@ -16,6 +16,7 @@ function PlantInfo() {
           //   position: "relative",
           cursor: "pointer",
           padding: "5px",
+          borderRadius: "0px 0px 97px 97px",
         }}
       >
         <div className="d-flex justify-content-between align-items-center w-100">
@@ -38,20 +39,27 @@ function PlantInfo() {
         </div>
         <h2 className="text-left">{data?.name}</h2>
         <div className="d-flex justify-content-between align-items-center w-100">
-          <p>
-            <b>{data?.price}</b>
-          </p>
+          <div className="w-75">
+            <p className="w-75">
+              <b>{data?.price}</b>
+            </p>
+          </div>
           <div
-            style={{
-              position: "relative",
-              width: "100%",
-            }}
+            className=""
+            style={
+              {
+                //   position: "relative",
+                //   width: "50%",
+              }
+            }
           >
             <img
-              style={{
-                position: "absolute",
-                right: "-20%",
-              }}
+              style={
+                {
+                  // position: "absolute",
+                  // right: "-20%",
+                }
+              }
               src={data?.image}
               width={"227px"}
               height={"250px"}
