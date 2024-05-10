@@ -27,12 +27,13 @@ function PlantList() {
     >
       {plantList?.map((each) => (
         <div
-          className="px-2 my-5"
+          key={each?.id}
+          className="px-2 my-4"
           style={{
             width: "280px",
             background: "#B0EAD5",
             borderRadius: "16px",
-            // position: "relative",
+            position: "relative",
             // marginTop: "15px",
             cursor: "pointer",
           }}
@@ -51,12 +52,16 @@ function PlantList() {
           >
             <img width={116} src={each?.image} />
           </div>
-          <p>{each?.category}</p>
           <p>
-            <b>{each?.name}</b>
+            <b>{each?.category}</b>
           </p>
+          <h2>
+            <b>{each?.name}</b>
+          </h2>
           <div className="d-flex ">
-            <p>{each?.price}</p>
+            <p>
+              <b>$ {each?.price}</b>
+            </p>
             <p>🖤</p>
           </div>
         </div>
